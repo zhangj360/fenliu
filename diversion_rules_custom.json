@@ -1,0 +1,214 @@
+{
+  "rules": [
+    {
+      "outbound": "currentSelected",
+      "name": "📹 油管视频",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:youtube"
+      ],
+      "package": [
+        "com.google.android.youtube"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "📲 电报消息",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geoip:telegram",
+        "geosite:telegram"
+      ],
+      "package": [
+        "org.telegram.messenger.web",
+        "org.telegram.messenger"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "🌏 Google Play",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:google-play"
+      ],
+      "package": [
+        "com.android.vending"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "🌏 Google",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:google",
+        "geoip:google"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "momolive",
+      "switch": true,
+      "or": true,
+      "domain_suffix": [
+        "momoindo.com",
+        "agora.io",
+        "googleusercontent.com",
+        "zkcvd17.online"
+      ],
+      "domain": [
+        "proxy.momoindo.com",
+        "qnoss.momoindo.com",
+        "ap3.agora.io",
+        "lh3.googleusercontent.com",
+        "access.zkcvd17.online",
+        "ap1-tds.agora.io",
+        "bs-game.momoindo.com"
+      ],
+      "ip_cidr": [
+        "150.136.108.0/24",
+        "129.154.231.0/24",
+        "23.98.43.0/24",
+        "3.0.163.0/24",
+        "129.151.253.0/24",
+        "107.155.53.0/24",
+        "129.153.208.0/24",
+        "144.24.139.0/24",
+        "199.190.44.0/24",
+        "158.101.165.0/24",
+        "146.56.189.0/24",
+        "168.138.222.0/24"
+      ],
+      "package": [
+        "com.huixin.mengguo"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "BIGO",
+      "switch": true,
+      "or": true,
+      "domain_suffix": [
+        ".piojm.tech",
+        ".sgmbocast.com",
+        ".bigolive.tv",
+        ".bigolive.sg",
+        ".bigo.sg",
+        ".tmdak.top",
+        ".owxd.xyz",
+        ".appsflyersdk.com",
+        ".weihuitel.com",
+        ".f2ecdn.com",
+        ".yqwsa.net",
+        ".ukyuh.tech",
+        ".cloudfront.net",
+        ".dfaklj.tech",
+        ".bdesk.tech",
+        ".bigopay.sg",
+        ".bigopay.tech"
+      ],
+      "domain": [
+        "esx.piojm.tech",
+        "static-web.piojm.tech",
+        "bstream.sgmbocast.com",
+        "gdl.bigo.sg",
+        "hotroom.live.bigo.sg",
+        "newlbs.live.bigo.sg",
+        "fbesx.bigo.sg",
+        "fs.calldev.bigo.sg",
+        "actan.owxd.xyz",
+        "giftesx.bigo.sg",
+        "image-pay.bdesk.tech",
+        "esx.bigo.sg",
+        "static.f2ecdn.com",
+        "support0.dfaklj.tech",
+        "videosnap.esx.bigo.sg",
+        "frontmon-sysop.bigo.sg",
+        "static-fed.yqwsa.net",
+        "ta.ukyuh.tech",
+        "inapps.appsflyersdk.com",
+        "okdeq-bh.tmdak.top"
+      ],
+      "ip_cidr": [
+        "164.90.0.0/16",
+        "103.139.72.0/24",
+        "202.168.0.0/16",
+        "169.136.0.0/16",
+        "202.63.0.0/16",
+        "36.155.0.0/16",
+        "42.81.0.0/16",
+        "116.63.0.0/16",
+        "18.155.0.0/16",
+        "18.239.0.0/16",
+        "198.18.0.0/16",
+        "31.58.0.0/16",
+        "58.217.0.0/16",
+        "58.221.0.0/16",
+        "13.225.0.0/16",
+        "13.226.0.0/16",
+        "13.32.0.0/16",
+        "13.33.0.0/16",
+        "13.35.0.0/16",
+        "113.105.0.0/16",
+        "13.57.0.0/16",
+        "13.115.0.0/16"
+      ]
+    },
+    {
+      "outbound": "direct",
+      "name": "meoo",
+      "switch": true,
+      "or": true,
+      "domain_suffix": [
+        "."
+      ],
+      "domain_keyword": [
+        "meoo"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "🐱 GitHub",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geoip:github",
+        "geosite:github"
+      ],
+      "package": [
+        "com.github.android"
+      ]
+    },
+    {
+      "outbound": "currentSelected",
+      "name": "🌏 国外穿墙",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "geosite:geolocation-!cn",
+        "geosite:google",
+        "geoip:google",
+        "acl:ProxyGFWlist",
+        "acl:ProxyMedia"
+      ]
+    },
+    {
+      "outbound": "direct",
+      "name": "🎯 国内直连",
+      "switch": true,
+      "or": true,
+      "rule_set_build_in": [
+        "acl:ChinaIp",
+        "acl:ChinaDomain",
+        "acl:ChinaCompanyIp",
+        "acl:UnBan",
+        "acl:SteamCN",
+        "acl:Download",
+        "acl:ChinaMedia"
+      ]
+    }
+  ]
+}
